@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Store v1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>⚔️ Minecraft Rank Store (v1)</h1>
+        <p>Subservers: Survival, Lifesteal, PvP · Payments: International cards + UPI.</p>
+      </header>
+
+      <section>
+        <h2>Ranks by Subserver</h2>
+        <div id="catalog" class="rank-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="checkout-box">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+          <label>
+            Minecraft Username
+            <input type="text" id="playerName" name="playerName" placeholder="Notch" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            Subserver
+            <select id="subserverId" name="subserverId" required></select>
+          </label>
+
+          <label>
+            Rank
+            <select id="rankId" name="rankId" required></select>
+          </label>
+
+          <label>
+            Payment Region/Currency
+            <select id="currency" name="currency" required>
+              <option value="USD">International (USD card)</option>
+              <option value="EUR">International (EUR card)</option>
+              <option value="GBP">International (GBP card)</option>
+              <option value="INR">India (INR card + UPI)</option>
+            </select>
+          </label>
+
+          <button type="submit">Proceed to Secure Checkout</button>
+        </form>
+
+        <p id="status" class="status"></p>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
