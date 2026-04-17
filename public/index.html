@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Server Rank Store</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Server Rank Store</h1>
+        <p>Choose a rank, checkout securely, and get upgraded fast.</p>
+      </header>
+
+      <section id="ranks" class="rank-grid" aria-label="Available ranks"></section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <template id="rank-card-template">
+      <article class="card">
+        <h2 class="rank-name"></h2>
+        <p class="rank-price"></p>
+        <ul class="rank-features"></ul>
+        <button class="buy-btn" type="button">Buy Rank</button>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
